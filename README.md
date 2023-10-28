@@ -11,13 +11,15 @@
 
 </br>
 
-This project aims to create a REST API that connects directly to MongoDB, performing CRUD operations. I developed an API using the Go programming language and the GIN framework, and all endpoints are documented with Swagger.
+This project aims to create a REST API that connects directly to MongoDB, performing CRUD operations. I developed the API using the Go programming language and the GIN framework, and all endpoints are documented with Swagger.
+
+To facilitate deployment and ensure consistency of the development environment, I used Docker to upload and manage the MongoDB instance.
 
 The project design is modular, following recognized development standards. I carefully selected the logic and structure, creating a specific folder for settings. This folder includes log files, connection to MongoDB and database initialization.
 
 I developed a custom logger to handle various responses and information from endpoints, from success responses to errors.
 
-I opted for a personalized approach to data validation, avoiding external libraries or libraries that allowed me to validate JSON structures accurately.
+I opted for a custom approach to data validation, avoiding external libraries, which allowed me to validate JSON structures accurately.
 
 To speed up development, I also created a Makefile with customized commands that facilitate routine tasks.
 
@@ -40,6 +42,9 @@ To speed up development, I also created a Makefile with customized commands that
 To use it, you need to clone the repository, install the dependencies and run the project.
 
 ```bash
+# Up Docker
+ docker compose up  
+
 # Open terminal/cmd and then Clone this repository
 $ git clone https://github.com/JuanCampbsi/go_api_mongo_db.git
 
@@ -50,7 +55,7 @@ $ cd go_api_mongo_db
 $ go mod tidy
 
 # Run the application in development mode
-$ go run main.go                           
+$ go run main.go  
 
 ```
 
@@ -63,6 +68,7 @@ $ go run main.go
 -   [GORM](https://gorm.io/gorm ) - version 1.25.1
 -   [MongoDB](go.mongodb.org/mongo-driver) - version 1.12.1
 -   [Swaggo](https://github.com/swaggo/swag) - version 1.16.1
+-   [Docker_Compose](https://docs.docker.com/compose/compose-file/) - version 3
  
 </br>
 
