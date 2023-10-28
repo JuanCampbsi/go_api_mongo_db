@@ -43,7 +43,7 @@ To use it, you need to clone the repository, install the dependencies and run th
 
 ```bash
 # Up Docker
- docker compose up  
+$ docker compose up  
 
 # Open terminal/cmd and then Clone this repository
 $ git clone https://github.com/JuanCampbsi/go_api_mongo_db.git
